@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Задаем значения M и N
+        int M = 5;
+        int N = 10;
+
+        // Выводим все натуральные числа в промежутке от M до N
+        PrintNaturalNumbers(M, N);
+    }
+
+    static void PrintNaturalNumbers(int start, int end)
+    {
+        if (start > end)
+            return;
+
+        Console.WriteLine(start);
+        PrintNaturalNumbers(start + 1, end);
+    }
+}
